@@ -1,5 +1,5 @@
 ### COMPILATION ###
-CC      = gcc -O2
+CC      = gcc
 FLAGS  = -Wall -Wextra -Werror
 
 ### EXECUTABLE ###
@@ -10,7 +10,7 @@ LIBFT  = LIBFT
 OBJ_PATH  = objs
 HEADER = incl
 SRC_PATH  = srcs
-MLX = libmlx
+MLX = minilibx-linux
 
 ### SOURCE FILES ###
 SOURCES = main.c \
