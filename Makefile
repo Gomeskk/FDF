@@ -6,7 +6,7 @@ FLAGS  = -Wall -Wextra -Werror
 NAME   = fdf
 
 ### INCLUDES ###
-LIBFT  = libft
+LIBFT  = LIBFT
 OBJ_PATH  = objs
 HEADER = incl
 SRC_PATH  = srcs
