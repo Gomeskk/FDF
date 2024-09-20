@@ -6,8 +6,8 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:20:25 by joafaust          #+#    #+#             */
-/*   Updated: 2024/09/20 17:16:17 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/09/20 18:43:46 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
+#include "../incl/fdf.h"
