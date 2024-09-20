@@ -14,13 +14,12 @@ MLX = libmlx
 
 ### SOURCE FILES ###
 SOURCES = main.c \
-		  parsing_map.c \
+		  limits.c \
 		  fdf.c \
-		  ft_draw.c \
-		  color_map.c \
-		  ft_color_converter.c \
-		  ft_settings.c \
-		  user_hook.c \
+		  draw.c \
+		  points.c \
+		  start.c \
+		  hooks.c \
 
 ### OBJECTS ###
 
