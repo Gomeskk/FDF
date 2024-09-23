@@ -48,7 +48,7 @@ lib:
 	@make -C $(MLX)
 
 $(NAME): $(OBJS)
-	$(CC) $(FLAGS) -L $(LIBFT) -L $(MLX) -o $@ $^ -lft -lmlx -lXext -lX11 -lm
+	$(CC) $(FLAGS) -I $(LIBFT) -I $(MLX) -L $(LIBFT) -L $(MLX) -o $@ $^ -lft -lmlx -lXext -lX11 -lm
 	@echo "$(GREEN)Project successfully compiled"
 
 tmp:

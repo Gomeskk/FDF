@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:30:38 by joafaust          #+#    #+#             */
-/*   Updated: 2024/09/21 16:42:55 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/09/23 12:42:18 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,22 +29,23 @@ void	my_mlx_pixel_put(t_data *data, int x, int y, int color)
 	*(unsigned int*)dst = color;
 }
 
-/* int	main(void)
+int	main(void)
 {
 	void	*mlx;
 	void	*mlx_win;
 	t_data	img;
 
 	mlx = mlx_init();
-	mlx_win = mlx_new_window(mlx, 1920, 1080, "Hello world!");
-	img.img = mlx_new_image(mlx, 100, 100);
+	mlx_win = mlx_new_window(mlx, 1320, 600, "Hello world!");
+	img.img = mlx_new_image(mlx, 120, 100);
 	img.addr = mlx_get_data_addr(img.img, &img.bits_per_pixel, &img.line_length,
 								&img.endian);
 	my_mlx_pixel_put(&img, 5, 5, 0x00FF0000);
+	// first x quanto maior u numeor, mais para a direita, eixo y quanto maior o numero mais para a esquerda.
 	mlx_put_image_to_window(mlx, mlx_win, img.img, 0, 0);
 	mlx_loop(mlx);
-} */
-int	main(void)
+}
+/* int	main(void)
 {
 	void	*mlx;
 	void	*mlx_win;
@@ -78,5 +79,5 @@ int	main(void)
 	my_mlx_pixel_put(&img, 5, 5, 0x00FF0000);
 	mlx_put_image_to_window(mlx, mlx_win, img.img, 0, 0);
 	mlx_loop(mlx);
-}
+} */
 
