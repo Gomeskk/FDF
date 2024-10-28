@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 17:14:36 by joafaust          #+#    #+#             */
-/*   Updated: 2024/10/28 12:20:26 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/10/28 12:58:54 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,27 @@
 ** argb stores inside .x the color used to draw the pixel
 ** and in y the required incrementation
 */
+
+typedef struct	s_argb
+{
+	float		a;
+	float		r;
+	float		g;
+	float		b;
+}				t_argb;
+
+typedef struct	s_argb2
+{
+	t_argb		x;
+	t_argb		y;
+}				t_argb2;
+
+/*
+** color.c ~ gradient colors functions
+*/
+t_argb2			gradient(unsigned a, unsigned b, int pixel);
+t_argb			ft_hex2argb(long hex);
+long			ft_argb2hex(t_argb rgb);
+unsigned		custom_color(t_3d *d, t_argb color, int shade);
 
 #endif
