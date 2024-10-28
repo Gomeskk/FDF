@@ -5,13 +5,13 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 11:42:43 by joafaust          #+#    #+#             */
-/*   Updated: 2024/10/28 11:43:16 by joafaust         ###   ########.fr       */
+/*   Created: 2024/10/28 12:18:33 by joafaust          #+#    #+#             */
+/*   Updated: 2024/10/28 12:19:12 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef KEYCODE_MAC_H
-# define KEYCODE_MAC_H
+#ifndef KEYCODE_LINUX_H
+# define KEYCODE_LINUX_H
 
 # define KEY_ESCAPE			27
 # define KEY_TILDE			96
