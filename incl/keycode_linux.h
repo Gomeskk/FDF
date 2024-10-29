@@ -6,92 +6,55 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 12:18:33 by joafaust          #+#    #+#             */
-/*   Updated: 2024/10/28 12:19:12 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/10/28 22:15:56 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef KEYCODE_LINUX_H
 # define KEYCODE_LINUX_H
 
-# define KEY_ESCAPE			27
-# define KEY_TILDE			96
-# define KEY_1				0x31
-# define KEY_2				0x32
-# define KEY_3				0x33
-# define KEY_4				0x34
-# define KEY_5				0x35
-# define KEY_6				0x36
-# define KEY_7				0x37
-# define KEY_8				0x38
-# define KEY_9				0x39
-# define KEY_0				0x30
-# define KEY_MINUS			45
-# define KEY_EQUAL			61
-# define KEY_BACKSPACE		127
-# define KEY_TAB			9
-# define KEY_Q				'q'
-# define KEY_W				'w'
-# define KEY_E				'e'
-# define KEY_R				'r'
-# define KEY_T				't'
-# define KEY_Y				'y'
-# define KEY_U				'u'
-# define KEY_I				'i'
-# define KEY_O				'o'
-# define KEY_P				'p'
-# define KEY_OPEN_BRACKET	'('
-# define KEY_OPEN_BRACE		'{'
-# define KEY_CLOSE_BRACKET	')'
-# define KEY_CLOSE_BRACE	'}'
-# define KEY_BACKSLASH		'\\'
-# define KEY_PIPE			'|'
-# define KEY_A				'a'
-# define KEY_S				's'
-# define KEY_D				'd'
-# define KEY_F				'f'
-# define KEY_G				'g'
-# define KEY_H				'h'
-# define KEY_J				'j'
-# define KEY_K				'k'
-# define KEY_L				'l'
-# define KEY_COLON			':'
-# define KEY_SEMI_COLON		';'
-# define KEY_SIMPLE_QUOTE	'\''
-# define KEY_DOUBLE_QUOTES	'"'
-# define KEY_ENTER			13
-# define KEY_Z				'z'
-# define KEY_X				'x'
-# define KEY_C				'c'
-# define KEY_V				'v'
-# define KEY_B				'b'
-# define KEY_N				'n'
-# define KEY_M				'm'
-# define KEY_LESS_THAN		'<'
-# define KEY_COMMA			','
-# define KEY_GREATER_THAN	'>'
-# define KEY_DOT			'.'
-# define KEY_SLASH			'/'
-# define KEY_QUESTION_MARK	'?'
-# define KEY_SPACE			' '
-# define KEY_LEFT			68
-# define KEY_DOWN			66
-# define KEY_RIGHT			67
-# define KEY_UP				65
-# define KEY_DEL			126
-# define KEY_HOME			72
-# define KEY_END			70
-# define KEY_PAGE_UP		53
-# define KEY_PAGE_DOWN		54
-# define KEY_CLEAR			71
-# define KEY_PAD_1			0x31
-# define KEY_PAD_2			0x32
-# define KEY_PAD_3			0x33
-# define KEY_PAD_4			0x34
-# define KEY_PAD_5			0x35
-# define KEY_PAD_6			0x36
-# define KEY_PAD_7			0x37
-# define KEY_PAD_8			0x38
-# define KEY_PAD_9			0x39
-# define KEY_PAD_0			0x30
+# define MOUSE_LEFT_BUTTON	1
+# define MOUSE_RIGHT_BUTTON	2
+# define MOUSE_THIRD_BUTTON	3
+# define MOUSE_SCROLL_UP	4
+# define MOUSE_SCROLL_DOWN	5
+# define MOUSE_SCROLL_LEFT	6
+# define MOUSE_SCROLL_RIGHT	7
+
+# define ARROW_UP			126
+# define ARROW_DOWN			125
+# define ARROW_LEFT			123
+# define ARROW_RIGHT		124
+
+# define NUM_PAD_0			82
+# define NUM_PAD_1			83
+# define NUM_PAD_2			84
+# define NUM_PAD_3			85
+# define NUM_PAD_4			86
+# define NUM_PAD_5			87
+# define NUM_PAD_6			88
+# define NUM_PAD_7			89
+# define NUM_PAD_8			91
+# define NUM_PAD_9			92
+# define NUM_PAD_PLUS		69
+# define NUM_PAD_MINUS		78
+
+# define MAIN_PAD_ESC		53
+# define MAIN_PAD_I			34
+# define MAIN_PAD_P			35
+# define MAIN_PAD_0			29
+# define MAIN_PAD_1			18
+# define MAIN_PAD_2			19
+# define MAIN_PAD_3			20
+# define MAIN_PAD_4			21
+# define MAIN_PAD_5			23
+# define MAIN_PAD_6			22
+# define MAIN_PAD_7			26
+# define MAIN_PAD_8			28
+# define MAIN_PAD_9			25
+# define MAIN_PAD_PLUS		24
+# define MAIN_PAD_MINUS		27
+# define MAIN_PAD_LESS		43
+# define MAIN_PAD_MORE		47
 
 #endif

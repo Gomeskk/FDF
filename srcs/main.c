@@ -6,11 +6,11 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:30:38 by joafaust          #+#    #+#             */
-/*   Updated: 2024/10/28 14:47:18 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/10/28 22:35:10 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../minilibx-linux/mlx.h"
+/* #include "../minilibx-linux/mlx.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -92,7 +92,7 @@ int	main(void)
 	draw_hexagon(&img, 700, 150, 50, 0x00FFFF00);  // Yellow hexagon
 	mlx_put_image_to_window(mlx, mlx_win, img.img, 0, 0);
 	mlx_loop(mlx);
-}
+} */
 /* int	main(void)
 {
 	void	*mlx;
