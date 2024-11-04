@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 17:14:36 by joafaust          #+#    #+#             */
-/*   Updated: 2024/10/29 00:35:55 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/04 12:53:06 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,28 @@
 # define FT_UINT_MAX 4294967295U // Assuming unsigned int is 32 bits
 # define FT_INT_MAX 2147483647   // Maximum positive value for a signed int
 # define FT_INT_MIN -2147483648  // Minimum value for a signed int
+
+static inline int	FT_MIN(int a, int b)
+{
+	if (a < b)
+		return (a);
+	else
+		return (b);
+}
+
+static inline int	FT_MAX(int a, int b)
+{
+	if (a > b)
+		return (a);
+	else
+		return (b);
+}
+
+typedef struct s_point
+{
+	int					x;
+	int					y;
+}						t_point;
 
 typedef enum s_bool
 {
