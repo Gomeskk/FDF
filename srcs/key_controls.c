@@ -6,12 +6,12 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:20:28 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/04 15:12:27 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/04 15:49:44 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
-#include "keycode_linux.h"
+#include "../incl/fdf.h"
+#include "../incl/keycode_linux.h"
 #include <stdlib.h>
 
 int	key_press(int key, void *param)

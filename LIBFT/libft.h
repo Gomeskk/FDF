@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 06:21:01 by joafaust          #+#    #+#             */
-/*   Updated: 2024/10/28 12:16:51 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:17:03 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,5 +69,10 @@ void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+/*
+** UTILS PLUS
+*/
+
+void				*ft_memalloc(size_t size);
 
 #endif

@@ -6,14 +6,14 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:20:31 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/04 14:28:11 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/04 15:52:07 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "colors.h"
-#include "fdf.h"
-#include "libft.h"
-#include "mlx.h"
+#include "../incl/colors.h"
+#include "../incl/fdf.h"
+#include "../LIBFT/libft.h"
+#include "../minilibx-linux/mlx.h"
 
 /*
 ** Put pixel into map image
