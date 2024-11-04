@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:20:31 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/04 12:57:18 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/04 14:28:11 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,8 @@ static void	draw_l(t_point f, t_point s, t_fdf *fdf)
 	while (cur.x != s.x || cur.y != s.y)
 	{
 		put_pix(fdf, cur.x, cur.y, get_color(cur, f, s, delta));
-		if ((error[1] = error[0] * 2) > -delta.y)
+		error[1] = error[0] * 2;
+		if ((error[1]) > -delta.y)
 		{
 			error[0] -= delta.y;
 			cur.x += sign.x;
