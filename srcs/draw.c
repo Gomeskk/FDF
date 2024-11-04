@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:20:31 by joafaust          #+#    #+#             */
-/*   Updated: 2024/10/28 22:46:38 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/04 12:57:18 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,17 @@ static void	put_pix(t_fdf *fdf, int x, int y, int color)
 /*
 ** Draw line
 */
+void	set_sign(t_point *sign, t_point f, t_point s)
+{
+	if (f.x < s.x)
+		sign->x = 1;
+	else
+		sign->x = -1;
+	if (f.y < s.y)
+		sign->y = 1;
+	else
+		sign->y = -1;
+}
 
 static void	draw_l(t_point f, t_point s, t_fdf *fdf)
 {
@@ -45,8 +56,7 @@ static void	draw_l(t_point f, t_point s, t_fdf *fdf)
 
 	delta.x = FT_ABS(s.x - f.x);
 	delta.y = FT_ABS(s.y - f.y);
-	sign.x = f.x < s.x ? 1 : -1;
-	sign.y = f.y < s.y ? 1 : -1;
+	set_sign(&sign, f, s);
 	error[0] = delta.x - delta.y;
 	cur = f;
 	while (cur.x != s.x || cur.y != s.y)
@@ -79,7 +89,10 @@ static void	draw_backg(t_fdf *fdf)
 	i = 0;
 	while (i < HEIGHT * WIDTH)
 	{
-		image[i] = (i % WIDTH < MENU_WIDTH) ? MENU_BACKGROUND : BACKGROUND;
+		if (i % WIDTH < MENU_WIDTH)
+			image[i] = MENU_BACKGROUND;
+		else
+			image[i] = BACKGROUND;
 		i++;
 	}
 }
@@ -101,11 +114,11 @@ void	draw(t_map *map, t_fdf *fdf)
 		while (x < map->width)
 		{
 			if (x != fdf->map->width - 1)
-				draw_l(project(n_point(x, y, map), fdf), project(n_point(x
-							+ 1, y, map), fdf), fdf);
+				draw_l(project(n_point(x, y, map), fdf), project(n_point(x + 1,
+							y, map), fdf), fdf);
 			if (y != fdf->map->height - 1)
-				draw_l(project(n_point(x, y, map), fdf), project(n_point(x,
-							y + 1, map), fdf), fdf);
+				draw_l(project(n_point(x, y, map), fdf), project(n_point(x, y
+							+ 1, map), fdf), fdf);
 			x++;
 		}
 		y++;
