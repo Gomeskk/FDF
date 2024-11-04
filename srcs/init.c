@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 22:51:15 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/04 14:25:57 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/04 14:29:45 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,3 @@ t_camera	*camera_init(t_fdf *fdf)
 	camera->y_offset = 0;
 	return (camera);
 }
-
-// FT_MIN
-// norminette convert.c draw.c
