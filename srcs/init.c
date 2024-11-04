@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 22:51:15 by joafaust          #+#    #+#             */
-/*   Updated: 2024/10/29 00:46:02 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/10/29 00:52:20 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,3 +79,5 @@ t_camera	*camera_init(t_fdf *fdf)
 	camera->y_offset = 0;
 	return (camera);
 }
+
+//FT_MIN
