@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "fdf.h"
-#include "keycode_linux.h"
+#include "../incl/fdf.h"
+#include "../incl/keycode_linux.h"
 
 /*
 ** Zoom map

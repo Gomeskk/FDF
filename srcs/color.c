@@ -6,12 +6,12 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 12:51:12 by joafaust          #+#    #+#             */
-/*   Updated: 2024/10/28 23:27:09 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:06:26 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "colors.h"
-#include "fdf.h"
+#include "../incl/colors.h"
+#include "../incl/fdf.h"
 
 /*
 ** Get color from default palette. Color depends on altitude
@@ -62,10 +62,10 @@ int	get_color(t_point current, t_point start, t_point end, t_point delta)
 		percentage = percent(start.x, end.x, current.x);
 	else
 		percentage = percent(start.y, end.y, current.y);
-	red = get_light((start.color >> 16) & 0xFF, (end.color >> 16) & 0xFF,
+	red = get_li((start.color >> 16) & 0xFF, (end.color >> 16) & 0xFF,
 			percentage);
-	green = get_light((start.color >> 8) & 0xFF, (end.color >> 8) & 0xFF,
+	green = get_li((start.color >> 8) & 0xFF, (end.color >> 8) & 0xFF,
 			percentage);
-	blue = get_light(start.color & 0xFF, end.color & 0xFF, percentage);
+	blue = get_li(start.color & 0xFF, end.color & 0xFF, percentage);
 	return ((red << 16) | (green << 8) | blue);
 }

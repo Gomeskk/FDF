@@ -6,13 +6,13 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:20:37 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/04 14:19:08 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:29:49 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "error_msg.h"
-#include "fdf.h"
-#include "libft.h"
+#include "../incl/error_msg.h"
+#include "../incl/fdf.h"
+#include "../LIBFT/libft.h"
 #include <stdlib.h>
 
 /*
@@ -27,9 +27,9 @@ void	stack_to_arrays(t_order_val **order_stack, t_map *map)
 	size_t		arr_size;
 
 	order = pop(order_stack);
+	arr_size = map->width * map->height * sizeof(int);
 	map->order_arr = (int *)ft_memalloc(arr_size);
 	map->colors_arr = (int *)ft_memalloc(arr_size);
-	arr_size = map->width * map->height * sizeof(int);
 	if (!(map->order_arr))
 		terminate(ERR_CONV_TO_ARR);
 	if (!(map->colors_arr))

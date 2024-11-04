@@ -12,13 +12,15 @@ SRC_PATH  = srcs
 MLX = minilibx-linux
 
 ### SOURCE FILES ###
-SOURCES = main.c \
-		  limits.c \
-		  fdf.c \
+SOURCES = color.c \
+		  controls_u.c \
+		  controls.c \
+		  convert.c \
 		  draw.c \
-		  points.c \
-		  start.c \
-		  hooks.c \
+		  init.c \
+		  key_contorls.c \
+		  main.c \
+		  menu.c \
 
 ### OBJECTS ###
 

@@ -6,14 +6,14 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 22:51:15 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/04 14:29:45 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/04 15:51:26 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "error_msg.h"
-#include "fdf.h"
-#include "libft.h"
-#include "mlx.h"
+#include "../incl/error_msg.h"
+#include "../incl/fdf.h"
+#include "../LIBFT/libft.h"
+#include "../minilibx-linux/mlx.h"
 
 /*
 ** Initialize t_map element

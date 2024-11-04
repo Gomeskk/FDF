@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 17:14:36 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/04 12:53:06 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/04 16:24:48 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,6 @@ static inline int	FT_MAX(int a, int b)
 	else
 		return (b);
 }
-
-typedef struct s_point
-{
-	int					x;
-	int					y;
-}						t_point;
 
 typedef enum s_bool
 {
@@ -143,7 +137,7 @@ t_point					project(t_point p, t_fdf *fdf);
 
 void					print_menu(t_fdf *fdf);
 
-int						close(void *param);
+int						ft_close(void *param);
 
 void					setup_controls(t_fdf *fdf);
 

@@ -58,6 +58,15 @@
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "files.associations": {
     "mlx.h": "c",
-    "mlx_int.h": "c"
+    "mlx_int.h": "c",
+    "fcntl.h": "c",
+    "fdf.h": "c",
+    "errno.h": "c",
+    "error_msg.h": "c",
+    "colors.h": "c",
+    "keycode_linux.h": "c",
+    "libft.h": "c",
+    "stdlib.h": "c",
+    "unistd.h": "c"
   }
 }
