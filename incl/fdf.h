@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 17:14:36 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/04 16:24:48 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:12:24 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,15 @@
 # define FT_INT_MAX 2147483647   // Maximum positive value for a signed int
 # define FT_INT_MIN -2147483648  // Minimum value for a signed int
 
-static inline int	FT_MIN(int a, int b)
+static inline int	ft_abs(int x)
+{
+	if (x < 0)
+		return (-x);
+	else
+		return (x);
+}
+
+static inline int	ft_min(int a, int b)
 {
 	if (a < b)
 		return (a);
@@ -29,7 +37,7 @@ static inline int	FT_MIN(int a, int b)
 		return (b);
 }
 
-static inline int	FT_MAX(int a, int b)
+static inline int	ft_max(int a, int b)
 {
 	if (a > b)
 		return (a);
@@ -110,7 +118,7 @@ typedef struct s_fdf
 	t_mouse				*mouse;
 }						t_fdf;
 int						read_map(const int fd, t_order_val **orders_stack,
-							t_map *map);
+						t_map *map);
 
 void					push(t_order_val **orders_stack, t_order_val *new);
 
@@ -131,7 +139,7 @@ int						get_def_color(int z, t_map *map);
 int						get_li(int start, int end, double percentage);
 
 int						get_color(t_point current, t_point start, t_point end,
-							t_point delta);
+						t_point delta);
 
 t_point					project(t_point p, t_fdf *fdf);
 

@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 22:51:15 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/04 15:51:26 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:10:54 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ t_camera	*camera_init(t_fdf *fdf)
 	camera = (t_camera *)ft_memalloc(sizeof(t_camera));
 	if (!(camera))
 		terminate(ERR_CAMERA_INIT);
-	camera->zoom = FT_MIN((WIDTH - MENU_WIDTH) / fdf->map->width / 2, HEIGHT
+	camera->zoom = ft_min((WIDTH - MENU_WIDTH) / fdf->map->width / 2, HEIGHT
 			/ fdf->map->height / 2);
 	camera->alpha = 0;
 	camera->beta = 0;

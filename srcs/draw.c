@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:20:31 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/04 15:52:07 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:10:27 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ static void	draw_l(t_point f, t_point s, t_fdf *fdf)
 	t_point	cur;
 	int		error[2];
 
-	delta.x = FT_ABS(s.x - f.x);
-	delta.y = FT_ABS(s.y - f.y);
+	delta.x = ft_abs(s.x - f.x);
+	delta.y = ft_abs(s.y - f.y);
 	set_sign(&sign, f, s);
 	error[0] = delta.x - delta.y;
 	cur = f;
