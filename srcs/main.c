@@ -6,18 +6,18 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:30:38 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/04 15:44:44 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:33:09 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../incl/error_msg.h"
 #include "../incl/fdf.h"
 #include "../minilibx-linux/mlx.h"
-#include "../incl/error_msg.h"
 #include <errno.h>
 #include <fcntl.h>
 #include <stdlib.h>
 
-int		main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int			fd;
 	t_map		*map;
@@ -28,7 +28,8 @@ int		main(int argc, char **argv)
 	orders_stack = NULL;
 	if (argc == 2)
 	{
-		if (!((fd = open(argv[1], O_RDONLY)) >= 0))
+		fd = open(argv[1], O_RDONLY) >= 0;
+		if (!(fd))
 			terminate(ERR_MAP);
 		map = map_init();
 		if (read_map(fd, &orders_stack, map) == -1)

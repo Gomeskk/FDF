@@ -18,7 +18,7 @@ SOURCES = color.c \
 		  convert.c \
 		  draw.c \
 		  init.c \
-		  key_contorls.c \
+		  key_controls.c \
 		  main.c \
 		  menu.c \
 

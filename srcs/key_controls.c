@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:20:28 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/04 15:49:44 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/05 14:15:42 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	key_press(int key, void *param)
 		|| key == MAIN_PAD_9)
 		rotate(key, fdf);
 	else if (key == MAIN_PAD_LESS || key == MAIN_PAD_MORE)
-		flatten(key, fdf);
+		compress(key, fdf);
 	else if (key == MAIN_PAD_P || key == MAIN_PAD_I)
 		change_projection(key, fdf);
 	return (0);
