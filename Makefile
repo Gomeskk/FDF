@@ -21,6 +21,7 @@ SOURCES = color.c \
 		  key_controls.c \
 		  main.c \
 		  menu.c \
+		  read_map.c \
 
 ### OBJECTS ###
 

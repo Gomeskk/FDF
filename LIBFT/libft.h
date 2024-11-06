@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/15 06:21:01 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/05 15:49:52 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/06 14:28:41 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 #  define BUFFER_SIZE 42
 # endif
 
-char				*get_next_line(int fd);
+char				*get_next_line(int fd, char **line);
 int					nl(char *line);
 void				*ft_memalloc(size_t size);
 
