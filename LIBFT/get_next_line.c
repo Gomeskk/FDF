@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:29:13 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/05 15:44:42 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/06 14:27:30 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,26 +32,27 @@ int	nl(char *buf)
 	return (b);
 }
 
-char	*get_next_line(int fd)
+char	*get_next_line(int fd, char **line)
 {
-	char		*line;
 	static char	buff[FOPEN_MAX][BUFFER_SIZE + 1];
 	int			i;
 
 	i = 0;
-	if (fd < 0 || BUFFER_SIZE < 1 || fd >= FOPEN_MAX)
+	if (fd < 0 || BUFFER_SIZE < 1 || fd >= FOPEN_MAX || !line)
 	{
 		if (fd > 0 && fd < FOPEN_MAX)
 			while (buff[fd][i])
 				buff[fd][i++] = 0;
-		return (NULL);
+		return (-1);
 	}
-	line = NULL;
+	*line = NULL;
 	while (*(buff[fd]) || read(fd, buff[fd], BUFFER_SIZE) > 0)
 	{
-		line = ft_strjoin(line, buff[fd]);
+		*line = ft_strjoin(line, buff[fd]);
+		if (!(*line))
+			return (-1);
 		if (nl(buff[fd]) == 1)
 			break ;
 	}
-	return (line);
+	return (*line != NULL);
 }
