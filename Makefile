@@ -26,6 +26,7 @@ SOURCES = color.c \
 		  util.c \
 		  utils2.c \
 		  mouse_controls.c \
+		  project.c \
 
 ### OBJECTS ###
 

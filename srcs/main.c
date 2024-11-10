@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:30:38 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/05 14:33:09 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/10 15:53:40 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	main(int argc, char **argv)
 		stack_to_arrays(&orders_stack, map);
 		fdf->cam = camera_init(fdf);
 		draw(fdf->map, fdf);
-		setup_controls(fdf);
+		set_controls(fdf);
 		mlx_loop(fdf->mlx);
 	}
 	terminate(ERR_USAGE);

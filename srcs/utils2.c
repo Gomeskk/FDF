@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 13:27:22 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/10 14:39:34 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/10 15:42:22 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int	get_index(int x, int y, int width)
 ** Create t_point element (x value + y value + z value + color value)
 */
 
-t_point	new_point(int x, int y, t_map *map)
+t_point	n_point(int x, int y, t_map *map)
 {
 	t_point	point;
 	int		index;
