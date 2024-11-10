@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 17:14:36 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/05 15:52:56 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/10 15:53:34 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -147,7 +147,7 @@ void					print_menu(t_fdf *fdf);
 
 int						ft_close(void *param);
 
-void					setup_controls(t_fdf *fdf);
+void					set_controls(t_fdf *fdf);
 
 int						key_press(int key, void *param);
 

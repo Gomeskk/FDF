@@ -6,11 +6,50 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:29:13 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/06 14:27:30 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/10 16:20:43 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "get_next_line.h"
+
+size_t	ft_strlen(const char *str)
+{
+	size_t	i;
+
+	i = 0;
+	if (!str)
+		return (0);
+	while (str[i] && str[i] != 10)
+		i++;
+	if (str[i] == 10)
+		i++;
+	return (i);
+}
+
+char	*ft_strjoin1(char *str1, char *str2)
+{
+	char	*retn;
+	size_t	i;
+
+	retn = malloc(ft_strlen(str1) + ft_strlen(str2) + 1);
+	if (!retn)
+		return (NULL);
+	i = 0;
+	while (str1 && str1[i])
+	{
+		retn[i] = str1[i];
+		i++;
+	}
+	free(str1);
+	while (*str2)
+	{
+		retn[i++] = *str2;
+		if (*str2++ == 10)
+			break ;
+	}
+	retn[i] = 0;
+	return (retn);
+}
 
 int	nl(char *buf)
 {
@@ -48,7 +87,7 @@ char	*get_next_line(int fd, char **line)
 	*line = NULL;
 	while (*(buff[fd]) || read(fd, buff[fd], BUFFER_SIZE) > 0)
 	{
-		*line = ft_strjoin(line, buff[fd]);
+		*line = ft_strjoin1(line, buff[fd]);
 		if (!(*line))
 			return (-1);
 		if (nl(buff[fd]) == 1)
