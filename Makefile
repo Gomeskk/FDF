@@ -22,6 +22,10 @@ SOURCES = color.c \
 		  main.c \
 		  menu.c \
 		  read_map.c \
+		  read_stack.c \
+		  util.c \
+		  utils2.c \
+		  mouse_controls.c \
 
 ### OBJECTS ###
 

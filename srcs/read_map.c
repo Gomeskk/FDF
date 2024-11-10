@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:05:58 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/06 15:51:32 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:41:30 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,4 +125,3 @@ int	read_map(const int fd, t_order_val **coords_stack, t_map *map)
 		terminate(ERR_MAP);
 	return (0);
 }
-
