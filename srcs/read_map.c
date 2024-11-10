@@ -6,12 +6,11 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:05:58 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/10 16:09:43 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/10 18:30:29 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../LIBFT/libft.h"
-#include "../LIBFT/get_next_line.h"
 #include "../incl/error_msg.h"
 #include "../incl/fdf.h"
 #include <stdlib.h>
