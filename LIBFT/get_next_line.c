@@ -6,11 +6,13 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:29:13 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/10 16:20:43 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/10 18:36:36 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
+#include <stdlib.h>
+#include <unistd.h>
 
 size_t	ft_strlen(const char *str)
 {
@@ -82,16 +84,16 @@ char	*get_next_line(int fd, char **line)
 		if (fd > 0 && fd < FOPEN_MAX)
 			while (buff[fd][i])
 				buff[fd][i++] = 0;
-		return (-1);
+		return (NULL);
 	}
 	*line = NULL;
 	while (*(buff[fd]) || read(fd, buff[fd], BUFFER_SIZE) > 0)
 	{
-		*line = ft_strjoin1(line, buff[fd]);
+		*line = ft_strjoin1(*line, buff[fd]);
 		if (!(*line))
-			return (-1);
+			return (NULL);
 		if (nl(buff[fd]) == 1)
 			break ;
 	}
-	return (*line != NULL);
+	return (*line);
 }
