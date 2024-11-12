@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:05:58 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/10 18:30:29 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/12 17:51:44 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,11 +62,11 @@ static t_order_val	*new_coord(char *s)
 	if (!(coord))
 		terminate(ERR_MAP_READING);
 	if (!(parts))
-		terminate(ERR_MAP_READING);
+		terminate("1");
 	if (!ft_isnumber(parts[0], 10))
-		terminate(ERR_MAP_READING);
+		terminate("2");
 	if (parts[1] && !ft_isnumber(parts[1], 16))
-		terminate(ERR_MAP_READING);
+		terminate("3");
 	coord->z = ft_atoi(parts[0]);
 	if (parts[1])
 		coord->color = ft_atoi_base(parts[1], 16);
