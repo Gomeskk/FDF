@@ -6,13 +6,13 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:20:37 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/12 18:12:11 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:47:32 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../LIBFT/libft.h"
 #include "../incl/error_msg.h"
 #include "../incl/fdf.h"
-#include "../LIBFT/libft.h"
 #include <stdlib.h>
 
 /*
@@ -26,16 +26,14 @@ void	stack_to_arrays(t_order_val **order_stack, t_map *map)
 	ssize_t		i;
 	size_t		arr_size;
 
-	order = pop(order_stack);
 	arr_size = map->width * map->height * sizeof(int);
 	map->order_arr = (int *)ft_memalloc(arr_size);
 	map->colors_arr = (int *)ft_memalloc(arr_size);
-	if (!(map->order_arr))
-		terminate(ERR_CONV_TO_ARR);
-	if (!(map->colors_arr))
+	if (!(map->order_arr) || !(map->colors_arr))
 		terminate(ERR_CONV_TO_ARR);
 	i = map->width * map->height - 1;
-	while ((order) && i >= 0)
+	order = pop(order_stack);
+	while (order && i >= 0)
 	{
 		map->order_arr[i] = order->z;
 		map->colors_arr[i] = order->color;
@@ -45,6 +43,7 @@ void	stack_to_arrays(t_order_val **order_stack, t_map *map)
 			map->z_min = order->z;
 		i--;
 		free(order);
+		order = pop(order_stack);
 	}
 	map->z_range = map->z_max - map->z_min;
 }
