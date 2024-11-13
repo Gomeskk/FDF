@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:20:20 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/13 15:34:52 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/13 21:59:19 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	set_controls(t_fdf *fdf)
 {
 	mlx_hook(fdf->win, 2, (1L << 0), key_press, fdf);
 	mlx_hook(fdf->win, 17, 0, ft_close, fdf);
-	mlx_hook(fdf->win, 4, 0, mouse_press, fdf);
-	mlx_hook(fdf->win, 5, 0, mouse_release, fdf);
-	mlx_hook(fdf->win, 6, 0, mouse_move, fdf);
+	mlx_hook(fdf->win, 4, (1L << 2), mouse_press, fdf);
+	mlx_hook(fdf->win, 5, (1L << 3), mouse_release, fdf);
+	mlx_hook(fdf->win, 6, (1L << 6), mouse_move, fdf);
 }
