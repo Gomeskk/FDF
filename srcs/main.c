@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:30:38 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/12 18:09:37 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/13 12:48:20 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ int	main(int argc, char **argv)
 	t_order_val	*orders_stack;
 	t_fdf		*fdf;
 
-	errno = 0;
 	orders_stack = NULL;
 	if (argc == 2)
 	{
