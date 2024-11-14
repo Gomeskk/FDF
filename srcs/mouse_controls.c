@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 11:26:03 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/14 12:06:30 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/14 15:55:33 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,3 @@ int	mouse_move(int x, int y, void *param)
 	}
 	return (0);
 }
-
