@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 12:10:32 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/13 12:02:53 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/14 15:49:11 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ t_bool	ft_isnumber(char *str, int base)
 		i++;
 		digits++;
 	}
-	if ((!str[i] || str[i] == '\n') && digits)
+	if ((!str[i] || str[i] == '\n'))
 		return (true);
 	else
 		return (false);

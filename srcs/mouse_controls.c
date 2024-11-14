@@ -6,12 +6,20 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 11:26:03 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/10 14:51:59 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/14 12:06:30 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../incl/fdf.h"
 #include "../incl/keycode_linux.h"
+
+/*
+** Mouse Press Handler
+**
+** Handles mouse button presses. If the scroll wheel is used,
+** the `zoom` function is called. If the left mouse button
+** is pressed, the `is_pressed` flag is set to true.
+*/
 
 int	mouse_press(int button, int x, int y, void *param)
 {
@@ -28,7 +36,10 @@ int	mouse_press(int button, int x, int y, void *param)
 }
 
 /*
-** Handle mouse release
+** Mouse Release Handler
+**
+** Handles mouse button releases. Sets the `is_pressed` flag
+** to false.
 */
 
 int	mouse_release(int button, int x, int y, void *param)
@@ -44,7 +55,11 @@ int	mouse_release(int button, int x, int y, void *param)
 }
 
 /*
-** Handle mouse move
+** Mouse Move Handler
+**
+** Handles mouse movement. If the left mouse button is pressed,
+** the camera's `beta` and `alpha` angles are updated based on
+** the mouse movement, and the scene is redrawn.
 */
 
 int	mouse_move(int x, int y, void *param)
@@ -64,3 +79,4 @@ int	mouse_move(int x, int y, void *param)
 	}
 	return (0);
 }
+
