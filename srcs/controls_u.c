@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:20:34 by joafaust          #+#    #+#             */
-/*   Updated: 2024/10/28 23:36:14 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/14 20:11:53 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	zoom(int key, t_fdf *fdf)
 		fdf->cam->zoom--;
 	if (fdf->cam->zoom < 1)
 		fdf->cam->zoom = 1;
-	draw(fdf->map, fdf);
 }
 
 /*
@@ -43,7 +42,6 @@ void	move(int key, t_fdf *fdf)
 		fdf->cam->y_offset -= 10;
 	else
 		fdf->cam->y_offset += 10;
-	draw(fdf->map, fdf);
 }
 
 /*
@@ -66,7 +64,6 @@ void	rotate(int key, t_fdf *fdf)
 	else if (key == NUM_PAD_7 || key == MAIN_PAD_7 || key == NUM_PAD_9
 		|| key == MAIN_PAD_9)
 		fdf->cam->gamma -= 0.05;
-	draw(fdf->map, fdf);
 }
 
 /*
@@ -83,7 +80,6 @@ void	compress(int key, t_fdf *fdf)
 		fdf->cam->z_div = 0.1;
 	else if (fdf->cam->z_div > 10)
 		fdf->cam->z_div = 10;
-	draw(fdf->map, fdf);
 }
 
 /*
@@ -99,5 +95,4 @@ void	change_projection(int key, t_fdf *fdf)
 		fdf->cam->projection = ISO;
 	else if (key == MAIN_PAD_P)
 		fdf->cam->projection = PARALLEL;
-	draw(fdf->map, fdf);
 }
