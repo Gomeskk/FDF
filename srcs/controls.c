@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:20:20 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/14 20:13:47 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/14 20:17:04 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_close(void *param)
 	exit(0);
 }
 
-int loop_draw(t_fdf *fdf)
+int	loop_draw(t_fdf *fdf)
 {
 	draw(fdf->map, fdf);
 	return (0);
