@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:05:58 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/14 14:17:12 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/18 16:28:02 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,13 @@ static t_order_val	*new_coord(char *s)
 	coord = (t_order_val *)ft_memalloc(sizeof(t_order_val));
 	parts = ft_split(s, ',');
 	if (!(coord))
-		terminate(ERR_MAP_READING);
+		terminate(ERR_MAP_READING, NULL);
 	if (!(parts))
-		terminate("1");
+		terminate("1", NULL);
 	if (!ft_isnumber(parts[0], 10))
-		terminate("2");
+		terminate("2", NULL);
 	if (parts[1] && !ft_isnumber(parts[1], 16))
-		terminate("3");
+		terminate("3", NULL);
 	coord->z = ft_atoi(parts[0]);
 	if (parts[1])
 		coord->color = ft_atoi_base(parts[1], 16);
@@ -95,8 +95,10 @@ static void	parse_line(char **coords_line, t_order_val **coords_stack,
 	}
 	if (map->height == 0)
 		map->width = width;
-	else if (map->width != width)
-		terminate(ERR_MAP);
+	else if (map->width != width){
+		printf("estou aqui\n");
+		terminate(ERR_MAP, NULL);
+	}
 }
 
 /*
@@ -114,7 +116,7 @@ int	read_map(const int fd, t_order_val **coords_stack, t_map *map)
 	{
 		coords_line = ft_split(line, ' ');
 		if (!(coords_line))
-			terminate(ERR_MAP_READING);
+			terminate(ERR_MAP_READING, NULL);
 		parse_line(coords_line, coords_stack, map);
 		free_strsplit_arr(coords_line);
 		ft_strdel(&line);
@@ -122,6 +124,6 @@ int	read_map(const int fd, t_order_val **coords_stack, t_map *map)
 		result = get_next_line(fd, &line);
 	}
 	if (!(*coords_stack))
-		terminate(ERR_MAP);
+		terminate(ERR_MAP, NULL);
 	return (0);
 }

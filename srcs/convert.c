@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:20:37 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/13 12:47:32 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:51:10 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	stack_to_arrays(t_order_val **order_stack, t_map *map)
 	map->order_arr = (int *)ft_memalloc(arr_size);
 	map->colors_arr = (int *)ft_memalloc(arr_size);
 	if (!(map->order_arr) || !(map->colors_arr))
-		terminate(ERR_CONV_TO_ARR);
+		terminate(ERR_CONV_TO_ARR, NULL);
 	i = map->width * map->height - 1;
 	order = pop(order_stack);
 	while (order && i >= 0)
