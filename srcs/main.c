@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 16:30:38 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/13 12:48:20 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/18 15:53:02 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ int	main(int argc, char **argv)
 	{
 		fd = open(argv[1], O_RDONLY);
 		if (!(fd))
-			terminate(ERR_MAP);
+			terminate(ERR_MAP, NULL);
 		map = map_init();
 		if (read_map(fd, &orders_stack, map) == -1)
 		{
-			terminate(ERR_MAP_READING);
+			terminate(ERR_MAP_READING, NULL);
 		}
 		fdf = fdf_init(map);
 		stack_to_arrays(&orders_stack, map);
@@ -42,6 +42,6 @@ int	main(int argc, char **argv)
 		set_controls(fdf);
 		mlx_loop(fdf->mlx);
 	}
-	terminate(ERR_USAGE);
+	terminate(ERR_USAGE, NULL);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:20:28 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/05 14:15:42 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/18 16:09:39 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	key_press(int key, void *param)
 
 	fdf = (t_fdf *)param;
 	if (key == MAIN_PAD_ESC)
-		exit(0);
+		term(param);
 	if (key == NUM_PAD_PLUS || key == MAIN_PAD_PLUS || key == NUM_PAD_MINUS
 		|| key == MAIN_PAD_MINUS)
 		zoom(key, fdf);

@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 22:51:15 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/05 14:10:54 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/18 16:14:19 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_map	*map_init(void)
 
 	map = (t_map *)ft_memalloc(sizeof(t_map));
 	if (!(map))
-		terminate(ERR_MAP_INIT);
+		terminate(ERR_MAP_INIT, NULL);
 	map->width = 0;
 	map->height = 0;
 	map->order_arr = NULL;
@@ -50,18 +50,18 @@ t_fdf	*fdf_init(t_map *map)
 	fdf->img = mlx_new_image(fdf->mlx, WIDTH, HEIGHT);
 	fdf->mouse = (t_mouse *)ft_memalloc(sizeof(t_mouse));
 	if (!(fdf))
-		terminate(ERR_FDF_INIT);
+		terminate(ERR_FDF_INIT, NULL);
 	if (!(fdf->mlx))
-		terminate(ERR_FDF_INIT);
+		terminate(ERR_FDF_INIT, fdf);
 	if (!(fdf->win))
-		terminate(ERR_FDF_INIT);
+		terminate(ERR_FDF_INIT, fdf);
 	if (!(fdf->img))
-		terminate(ERR_FDF_INIT);
+		terminate(ERR_FDF_INIT, fdf);
 	fdf->data_addr = mlx_get_data_addr(fdf->img, &(fdf->bits_p_pix),
 			&(fdf->size_line), &(fdf->endian));
 	fdf->map = map;
 	if (!(fdf->mouse))
-		terminate(ERR_FDF_INIT);
+		terminate(ERR_FDF_INIT, fdf);
 	return (fdf);
 }
 
@@ -75,7 +75,7 @@ t_camera	*camera_init(t_fdf *fdf)
 
 	camera = (t_camera *)ft_memalloc(sizeof(t_camera));
 	if (!(camera))
-		terminate(ERR_CAMERA_INIT);
+		terminate(ERR_CAMERA_INIT, NULL);
 	camera->zoom = ft_min((WIDTH - MENU_WIDTH) / fdf->map->width / 2, HEIGHT
 			/ fdf->map->height / 2);
 	camera->alpha = 0;

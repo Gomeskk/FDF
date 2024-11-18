@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 17:14:36 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/14 14:05:53 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/18 16:32:54 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,7 +145,7 @@ t_point					project(t_point p, t_fdf *fdf);
 
 void					print_menu(t_fdf *fdf);
 
-int						ft_close(void *param);
+int						term(void *param);
 
 void					set_controls(t_fdf *fdf);
 
@@ -173,7 +173,9 @@ int						ft_atoi_base(const char *str, int base);
 
 double					percent(int start, int end, int current);
 
-void					terminate(char *s);
+void					terminate(char *s, t_fdf *fdf);
+
+void					fdf_free(t_fdf *fdf);
 
 int						get_index(int x, int y, int width);
 
