@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/29 17:20:37 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/18 15:51:10 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/20 23:08:15 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,16 @@ void	stack_to_arrays(t_order_val **order_stack, t_map *map)
 		order = pop(order_stack);
 	}
 	map->z_range = map->z_max - map->z_min;
+}
+
+void	free_pop(t_order_val **order_stack)
+{
+	t_order_val	*clean;
+
+	clean = pop(order_stack);
+	while (clean)
+	{
+		free(clean);
+		clean = pop(order_stack);
+	}
 }

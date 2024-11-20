@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 17:14:36 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/18 16:32:54 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/20 23:08:55 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -180,5 +180,7 @@ void					fdf_free(t_fdf *fdf);
 int						get_index(int x, int y, int width);
 
 t_point					n_point(int x, int y, t_map *map);
+
+void					free_pop(t_order_val **order_stack);
 
 #endif
