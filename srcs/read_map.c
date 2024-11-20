@@ -6,7 +6,7 @@
 /*   By: joafaust <joafaust@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 15:05:58 by joafaust          #+#    #+#             */
-/*   Updated: 2024/11/18 16:28:02 by joafaust         ###   ########.fr       */
+/*   Updated: 2024/11/20 21:12:28 by joafaust         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ static t_order_val	*new_coord(char *s)
 ** and them add to stack
 */
 
-static void	parse_line(char **coords_line, t_order_val **coords_stack,
+static int	parse_line(char **coords_line, t_order_val **coords_stack,
 		t_map *map)
 {
 	int	width;
@@ -95,10 +95,9 @@ static void	parse_line(char **coords_line, t_order_val **coords_stack,
 	}
 	if (map->height == 0)
 		map->width = width;
-	else if (map->width != width){
-		printf("estou aqui\n");
-		terminate(ERR_MAP, NULL);
-	}
+	else if (map->width != width)
+		return (0);
+	return (1);
 }
 
 /*
@@ -116,8 +115,9 @@ int	read_map(const int fd, t_order_val **coords_stack, t_map *map)
 	{
 		coords_line = ft_split(line, ' ');
 		if (!(coords_line))
-			terminate(ERR_MAP_READING, NULL);
-		parse_line(coords_line, coords_stack, map);
+			return (ft_strdel(&line), free_strsplit_arr(coords_line), -1);
+		if (!parse_line(coords_line, coords_stack, map))
+			return (ft_strdel(&line), free_strsplit_arr(coords_line), -1);
 		free_strsplit_arr(coords_line);
 		ft_strdel(&line);
 		map->height++;
