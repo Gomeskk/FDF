@@ -10,21 +10,21 @@ Concept
 
 FDF (Fil De Fer, meaning "wireframe" in French) involves reading a **heightmap file** (a ```.fdf file```) and displaying the corresponding $\color{DarkOrange}{\textbf{3D representation}}$ using **line segments**. The project requires knowledge of:
 
-  - $\color{Cyan}{\textbf{2D and 3D coordinate systems}}$
+  - **2D and 3D coordinate systems**
 
-  - $\color{Magenta}{\textbf{Mathematical transformations}}$ (scaling, rotation, translation, projection)
+  - **Mathematical transformations** (scaling, rotation, translation, projection)
 
-  - $\color{YellowGreen}{\textbf{Bresenham's line-drawing algorithm}}$
+  - **Bresenham's line-drawing algorithm**
 
-  - $\color{Orange}{\textbf{Handling user inputs for interactivity}}$
+  - **Handling user inputs for interactivity**
 
-  - $\color{RoyalBlue}{\textbf{Using MiniLibX for graphics rendering}}$
+  - **Using MiniLibX for graphics rendering**
 
 ## Mandatory Requirements
 
   - **Read a ```.fdf``` file** containing a grid of integers representing heights.
 
-  - **Render a wireframe model** using $\color{LimeGreen}{\textbf{line segments}}$..
+  - **Render a wireframe model** using $\color{LimeGreen}{\textbf{line segments}}$.
 
   - **Implement at least one type of projection:**
 
@@ -34,13 +34,13 @@ FDF (Fil De Fer, meaning "wireframe" in French) involves reading a **heightmap f
 
   - Handle user interactions, such as:
 
-    - $\color{Gold}{\textbf{Zooming in/out}}$
+    - **Zooming in/out**
 
-    - $\color{Purple}{\textbf{Rotating the model}}$
+    - **Rotating the model**
 
-    - $\color{Salmon}{\textbf{Translating the view}}$
+    - **Translating the view**
 
-    - $\color{DarkOrchid}{\textbf{Changing projection type}}$
+    - **Changing projection type**
 
   - **Use MiniLibX for graphical rendering**.
 
@@ -48,15 +48,15 @@ FDF (Fil De Fer, meaning "wireframe" in French) involves reading a **heightmap f
 
 ## Bonus Features
 
-  - $\color{GoldenRod}{\textbf{Additional Projections}}$ (e.g., orthographic, perspective)
+  - **Additional Projections** (e.g., orthographic, perspective)
 
-  - $\color{FireBrick}{\textbf{Color Gradients}}$ based on height values
+  - **Color Gradients** based on height values
 
-  - $\color{DodgerBlue}{\textbf{Smooth Animations}}$ for transformations
+  - **Smooth Animations** for transformations
 
-  - $\color{SeaGreen}{\textbf{Mouse Controls}}$ for rotation and zoom
+  - **Mouse Controls** for rotation and zoom
 
-  - $\color{MediumVioletRed}{\textbf{Multiple File Support}}$ to load different maps dynamically
+  - **Multiple File Support** to load different maps dynamically
 
 ## Implementation Details
 
@@ -135,4 +135,4 @@ To run the program:
 
 ## Conclusion
 
-The FDF project is an excellent introduction to $\color{RoyalBlue}{\textbf{graphics programming}}$, requiring a combination of $\color{Magenta}{\textbf{mathematics, algorithmic thinking, and software engineering}}$. It teaches students how to handle graphical data structures, implement transformations, and optimize rendering for real-time visualization.
+The FDF project is an excellent introduction to $\color{RoyalBlue}{\textbf{graphics programming}}$, requiring a combination of $\color{RoyalBlue}{\textbf{mathematics, algorithmic thinking, and software engineering}}$. It teaches students how to handle graphical data structures, implement transformations, and optimize rendering for real-time visualization.
