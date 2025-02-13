@@ -120,7 +120,7 @@ To run the program:
 ```
 
 ## Project with bonus
-![FDF Visualization](./FDFgif.gif)
+![FDF Visualization](./FdFgif.gif)
 ###### Here is my FDF i did it with the bonus and extras
 
 ## Common Pitfalls
